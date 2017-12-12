@@ -1,29 +1,26 @@
 const createModel = require('../schemaTemplate');
 const MAIN = require('../../constants/dbDatabaseNames').MAIN;
-const APP = require('../../constants/dbModelNames').APP;
+const USER = require('../../constants/dbModelNames').USER;
 
-// APP model
-module.exports = createModel(MAIN, APP, {
+// USER model
+module.exports = createModel(MAIN, USER, {
     name: {
         type: String,
         required: true
     },
-    description: {
+    email: {
         type: String,
         required: true
     },
-    baseUrl: {
+    password: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
-    mainPhotoDir: {
-        type: String
+    applications: {
+        type: [ String ],
+        required: true
     },
-    photosDir: {
-        type: String
-    },
-    rating: {
+    registrationDate: {
         type: Number,
         required: true
     }
