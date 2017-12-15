@@ -2,20 +2,19 @@ const express = require('express');
 const app = express();
 const apiRouter = express.Router();
 
+const PORT = 3000;
+
 const ROUTER_UTILS = require('./utils/routerMethods');
 const APP_UTILS = require('./utils/appMethods');
 
-const getAppsRoute = require('./app/routes/apps/getApps');
-
-const PORT = 3000;
+const getApps = require('./app/routes/apps/getApps');
 
 APP_UTILS.addUseAllMethod(app);
-
 ROUTER_UTILS.addRoutesMethod(apiRouter);
 
 apiRouter.$routes({
     get: {
-        '/apps': getAppsRoute
+        '/apps': getApps
     }
 });
 
