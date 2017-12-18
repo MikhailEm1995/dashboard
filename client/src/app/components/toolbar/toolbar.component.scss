@@ -1,0 +1,57 @@
+@import '../../../assets/css/variables';
+
+.toolbar {
+  height: 80px;
+  background-color: $green;
+  padding: 20px 40px;
+  box-sizing: border-box;
+
+  &__logo {
+    float: left;
+
+    font: 700 1.6rem/40px 'Myriad', sans-serif;
+    color: $white-yellow;
+    text-transform: uppercase;
+  }
+}
+
+.burger {
+  float: right;
+
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  margin-top: 6px;
+
+  cursor: pointer;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &__bar {
+    display: block;
+    width: 35px;
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+
+    background-color: $white-yellow;
+
+    transition: all .4s ease;
+
+    &--top {
+      transform: rotate(135deg) translateY(-12px);
+    }
+
+    &--middle {
+      transform: translateX(15px);
+      opacity: 0;
+    }
+
+    &--bottom {
+      transform: rotate(-135deg) translateY(13px);
+    }
+  }
+}
