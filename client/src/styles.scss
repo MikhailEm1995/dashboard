@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/css/variables.scss';
+
+@font-face {
+  font-family: 'Myriad', sans-serif;
+  src: url('assets/fonts/MyriadPro/MyriadPro-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad', sans-serif;
+  src: url('assets/fonts/MyriadPro/MyriadPro-Bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
