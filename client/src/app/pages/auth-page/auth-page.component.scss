@@ -1,0 +1,99 @@
+@import '../../../assets/css/variables';
+
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(150deg, $green, $light-yellow);
+
+  font-family: 'Myriad', sans-serif;
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $brown;
+  }
+
+  &__form {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    background-color: rgba(229, 172, 39, .15);
+  }
+
+  &__button {
+    display: block;
+    border-radius: 20px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    &--green {
+      background-color: $green;
+
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    &--yellow {
+      background-color: $light-yellow;
+
+      text-transform: uppercase;
+      color: $black;
+    }
+  }
+
+  &__input {
+    display: inline-block;
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+    margin-top: 30px;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $brown;
+
+    font-size: 1rem;
+    color: $brown;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $brown;
+    }
+  }
+
+  &__social {
+    margin: 30px 0;
+  }
+
+  &__social-header {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .8rem;
+    font-weight: 700;
+    color: $brown;
+    text-transform: uppercase;
+  }
+
+  &__img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
+}
