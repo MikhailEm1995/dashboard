@@ -1,10 +1,17 @@
 @import '../../../assets/css/variables';
 
 .toolbar {
-  height: 80px;
+  height: $header-height;
+  width: 100%;
   background-color: $green;
   padding: 20px 40px;
   box-sizing: border-box;
+
+  z-index: 999;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 
   &__logo {
     float: left;

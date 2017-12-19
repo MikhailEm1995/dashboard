@@ -12,5 +12,7 @@ export class ToolbarComponent {
 
   onToggle(): void {
     this.open = !this.open;
+
+    this.onClick(this.open);
   }
 }
