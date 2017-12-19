@@ -1,22 +1,25 @@
 @import '../../../assets/css/variables';
 
+$sidebarWidth: 55%;
+
 .sidebar {
   height: 100%;
-  width: 40%;
+  width: $sidebarWidth;
   max-width: 480px;
   padding: $header-height 20px 30px;
+  box-sizing: border-box;
 
   background-color: $light-yellow;
 
   position: fixed;
   top: 0;
-  right: 100%;
+  left: -$sidebarWidth;
 
   z-index: 10;
 
   overflow: hidden;
 
-  transition: all .5s ease;
+  transition: all 1s ease;
 
   &--opened {
     left: 0;
@@ -47,6 +50,11 @@
     background-color: rgba(255, 255, 255, .4);
 
     cursor: pointer;
+
+    &:active,
+    &:focus {
+      background-color: rgba(255, 255, 255, .9);
+    }
   }
 
   &__button-img {

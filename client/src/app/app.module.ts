@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ContentComponent } from './components/content/content.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     AppComponent,
     AuthPageComponent,
     ToolbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule
