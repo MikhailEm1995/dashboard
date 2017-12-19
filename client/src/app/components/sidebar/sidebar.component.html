@@ -3,7 +3,7 @@
     <img src="../../../assets/images/user.png" class="sidebar__button-img">
     <span class="sidebar__button-text">My Profile</span>
   </button>
-  <button class="sidebar__button">
+  <button class="sidebar__button" [routerLink]="'/' + STORE">
     <img src="../../../assets/images/store.png" class="sidebar__button-img">
     <span class="sidebar__button-text">Store</span>
   </button>
@@ -15,7 +15,7 @@
     <img src="../../../assets/images/question.png" class="sidebar__button-img">
     <span class="sidebar__button-text">About</span>
   </button>
-  <button class="sidebar__button">
+  <button class="sidebar__button" [routerLink]="'/' + AUTH">
     <img src="../../../assets/images/logout.png" class="sidebar__button-img">
     <span class="sidebar__button-text">Logout</span>
   </button>
