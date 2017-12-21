@@ -3,6 +3,10 @@
 $filter-field-height: 30px;
 $filter-font: 600 .9rem 'Myriad', sans-serif;
 
+.content {
+  padding: $header-height 0 0;
+}
+
 .filter {
   display: flex;
   align-items: center;
@@ -27,12 +31,12 @@ $filter-font: 600 .9rem 'Myriad', sans-serif;
 
     border-radius: 20px;
 
-    background: url('../../../assets/images/search.png') rgba(255, 255, 255, .5) no-repeat 5% 50%;
+    background: url('../../../assets/images/search.png') rgba(255, 255, 255, .5) no-repeat 13px 50%;
     background-size: auto 65%;
 
     border: none;
 
-    font: .6rem 'Myriad', sans-serif;
+    font: $filter-font;
     color: $brown;
 
     &:focus {
@@ -161,7 +165,61 @@ $filter-font: 600 .9rem 'Myriad', sans-serif;
   }
 }
 
+.tiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  padding: 40px;
+}
+
+.tile {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+
+  cursor: pointer;
+
+  &__img-container {
+    height: 240px;
+    background-color: #eee;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__fake-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+    box-sizing: border-box;
+    background: url('../../../assets/images/plus.png') $yellow no-repeat 90% 50%;
+    background-size: auto 30%;
+  }
+
+  &__app-name {
+    font: 600 1.1rem 'Myriad', sans-serif;
+    color: $light-yellow;
+    text-transform: uppercase;
+  }
+}
+
 @media only screen and (max-width: $breakpoint) {
+  .content {
+    padding: $header-height * 2 0 0;
+  }
+
+  .tiles {
+    justify-content: center;
+    padding: 20px 10px;
+  }
+
   .filter {
     height: auto;
     flex-direction: column;
