@@ -6,7 +6,6 @@ import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { StorePageComponent } from './pages/store-page/store-page.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ContentComponent } from './components/content/content.component';
 
 import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -16,7 +15,6 @@ import { LayoutComponent } from './components/layout/layout.component';
     AppComponent,
     ToolbarComponent,
     SidebarComponent,
-    ContentComponent,
     AuthPageComponent,
     StorePageComponent,
     LayoutComponent

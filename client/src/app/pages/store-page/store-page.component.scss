@@ -1,0 +1,198 @@
+@import '../../../assets/css/variables';
+
+$filter-field-height: 30px;
+$filter-font: 600 .9rem 'Myriad', sans-serif;
+
+.filter {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  width: 100%;
+  height: $header-height;
+  padding: 0 40px;
+  box-sizing: border-box;
+  background-color: $yellow;
+
+  &__search {
+    display: inline-block;
+    height: $filter-field-height;
+    width: 33%;
+    padding: 5px 20px 5px 40px;
+    box-sizing: border-box;
+
+    margin-right: 30px;
+
+    border-radius: 20px;
+
+    background: url('../../../assets/images/search.png') rgba(255, 255, 255, .5) no-repeat 5% 50%;
+    background-size: auto 65%;
+
+    border: none;
+
+    font: .6rem 'Myriad', sans-serif;
+    color: $brown;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__sorting-container {
+    display: flex;
+    align-items: center;
+    width: 28%;
+    height: $filter-field-height;
+
+    margin-right: auto;
+
+    position: relative;
+  }
+
+  &__sorting {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    box-sizing: border-box;
+
+    border: none;
+
+    font: $filter-font;
+    color: $brown;
+    text-transform: uppercase;
+
+    border-radius: 20px;
+
+    background: url('../../../assets/images/arrow.png') rgba(255, 255, 255, .5) no-repeat 93% 50%;
+    background-size: auto 50%;
+
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__close-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: $filter-field-height;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, .4);
+
+    font: $filter-font;
+    color: $brown;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__options {
+    display: inline-block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding-bottom: 5px;
+    border-radius: 15px;
+
+    background-color: $light-yellow;
+  }
+
+  &__option {
+    padding: 3px 15px;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+  }
+
+  &__label {
+    font: $filter-font;
+    color: $brown;
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  &__button {
+    display: inline-block;
+    height: $filter-field-height;
+    width: 15%;
+
+    border-radius: 20px;
+
+    background-color: rgba(255, 255, 255, .5);
+
+    border: none;
+    border-bottom: 1px solid $shadow;
+
+    font: $filter-font;
+    color: $brown;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    &:active {
+      border: none;
+      border-top: 1px solid $yellow;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint) {
+  .filter {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+
+    &__sorting-container,
+    &__button {
+      height: 40px;
+      width: 100%;
+
+      margin: 10px 0 0;
+    }
+
+    &__sorting {
+      height: 100%;
+    }
+
+    &__close-options {
+      height: 40px;
+    }
+
+    &__search {
+      height: 40px;
+      width: 100%;
+      padding-left: 50px;
+      margin: 0;
+      background-position-x: 4%;
+    }
+
+    &__sorting {
+      background-position-x: 95%;
+    }
+  }
+}

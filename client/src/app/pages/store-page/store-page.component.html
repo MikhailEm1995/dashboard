@@ -1,3 +1,29 @@
 <app-layout>
-  
+  <div class="filter">
+    <input class="filter__search">
+    <div class="filter__sorting-container">
+      <button class="filter__sorting" (click)="toggleOptions()">sorting options</button>
+      <div class="filter__options" *ngIf="optionsOpened">
+        <button class="filter__close-options" (click)="toggleOptions()">Hide options</button>
+        <div class="filter__option">
+          <input type="checkbox" class="filter__checkbox" id="desc">
+          <label for="desc" class="filter__label">Descending</label>
+        </div>
+        <div class="filter__option">
+          <input type="checkbox" class="filter__checkbox" id="name">
+          <label for="name" class="filter__label">Name</label>
+        </div>
+        <div class="filter__option">
+          <input type="checkbox" class="filter__checkbox" id="rating">
+          <label for="rating" class="filter__label">Rating</label>
+        </div>
+        <div class="filter__option">
+          <input type="checkbox" class="filter__checkbox" id="downloaded">
+          <label for="downloaded" class="filter__label">Downloads</label>
+        </div>
+      </div>
+    </div>
+    <button class="filter__button">search</button>
+  </div>
+  <div class="content"></div>
 </app-layout>

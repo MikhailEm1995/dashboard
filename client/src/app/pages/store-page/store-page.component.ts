@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StorePageComponent implements OnInit {
 
+  optionsOpened = false;
+
+  toggleOptions() {
+    this.optionsOpened = !this.optionsOpened;
+  }
+
   constructor() { }
 
   ngOnInit() {
