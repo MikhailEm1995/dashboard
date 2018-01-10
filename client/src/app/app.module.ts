@@ -9,6 +9,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { AppRoutingModule } from './modules/app-routing/app-routing.module';
 import { LayoutComponent } from './components/layout/layout.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LayoutComponent } from './components/layout/layout.component';
     SidebarComponent,
     AuthPageComponent,
     StorePageComponent,
-    LayoutComponent
+    LayoutComponent,
+    ModalComponent
   ],
   imports: [
     AppRoutingModule,
