@@ -13,7 +13,9 @@ $sidebarWidth: 55%;
 
   position: fixed;
   top: 0;
-  left: -$sidebarWidth;
+  left: 0;
+
+  transform: translateX(-100%);
 
   z-index: 10;
 
@@ -22,7 +24,7 @@ $sidebarWidth: 55%;
   transition: all 1s ease;
 
   &--opened {
-    left: 0;
+    transform: translateX(0);
   }
 
   &__header {

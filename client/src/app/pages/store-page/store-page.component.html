@@ -1,6 +1,9 @@
 <app-layout>
   <div class="filter">
-    <input class="filter__search">
+    <div class="filter__search-container">
+      <input class="filter__search" title="Search field">
+      <span class="filter__search-icon"></span>
+    </div>
     <div class="filter__sorting-container">
       <button class="filter__sorting" (click)="toggleOptions()">sorting options</button>
       <div class="filter__options" *ngIf="optionsOpened">
@@ -29,14 +32,14 @@
     <div class="tiles">
       <div class="tile">
         <div class="tile__img-container">
-          <img src="" alt="no img" class="tile__img">
+          <img src="../../../assets/images/mocks/mustache.jpg" alt="Application image" class="tile__img">
         </div>
-        <div class="tile__fake-button">
+        <div class="tile__title">
           <span class="tile__app-name">Accountant</span>
         </div>
       </div>
     </div>
   </div>
 
-  <app-modal *ngIf="true"></app-modal>
+  <app-modal *ngIf="false" [appData]="data"></app-modal>
 </app-layout>

@@ -1,29 +1,79 @@
 <div class="veil">
   <div class="modal">
-    <div class="modal__top-panel">
-      <button class="modal__close"></button>
-    </div>
     <div class="modal__content">
-      <div class="modal__main-info">
+      <div class="modal__row">
         <div class="modal__column">
-          <img src="" alt="" class="modal__avatar">
+          <img [src]="appData.image" [alt]="appData.name" class="modal__avatar">
         </div>
         <div class="modal__column">
-          <h2 class="modal__header">Accountant</h2>
-          <div class="modal__rating"></div>
-          <div class="modal__specs"></div>
-          <button class="modal__add-button">Add application</button>
+          <h2 class="modal__header">{{ appData.name }}</h2>
+          <div class="modal__rating">
+            <span class="modal__rating-number">{{ appData.rating }}/5.0</span>
+            <span
+              *ngFor="let item of getArrayOfStartsClasses()"
+              [class]="'modal__rating-star ' + item">
+            </span>
+          </div>
+          <ul class="modal__specs">
+            <li class="modal__specs-item">Category: {{ appData.category }}</li>
+            <li class="modal__specs-item">Sub-category: {{ appData.subCategory }}</li>
+            <li class="modal__specs-item">Author: {{ appData.author }}</li>
+            <li class="modal__specs-item">Version: {{ appData.version }}</li>
+            <li class="modal__specs-item">Downloaded (times): {{ appData.downloads }}</li>
+          </ul>
+          <a [href]="'mailto:' + appData.eMail" class="modal__contact">Contact author</a>
+          <div class="modal__button-wrapper">
+            <button class="modal__add-button">Add application</button>
+          </div>
         </div>
       </div>
-      <div class="modal__description">
+      <div class="modal__row">
         <h3 class="modal__sub-header">Description</h3>
-        <p class="modal__text">Text text text text text text text text text text text text text text text</p>
+        <p class="modal__text">{{ appData.description }}</p>
       </div>
-      <div class="modal__preview">
+      <div class="modal__row">
         <h3 class="modal__sub-header">Preview</h3>
+        <div class="modal__preview-container">
+          <div class="modal__preview-img-container" *ngFor="let imgSrc of previewImages">
+            <img [src]="imgSrc" alt="Preview image" class="modal__preview-img">
+          </div>
+        </div>
       </div>
-      <div class="modal__comments">
+      <div class="modal__row">
         <h3 class="modal__sub-header">Comments</h3>
+        <div class="comments">
+          <form class="comments__block">
+            <div class="comments__avatar-container">
+              <img src="../../../assets/images/mocks/mustache.jpg" alt="Name" class="comments__avatar">
+            </div>
+            <div class="comments__field">
+              <span class="comments__triangle"></span>
+              <input class="comments__input" title="Comment">
+              <input type="submit" class="comments__submit" value="">
+            </div>
+          </form>
+          <ul class="comments__list">
+            <li class="comments__block" *ngFor="let comment of appData.comments">
+              <div class="comments__avatar-container">
+                <img [src]="comment.avatar" [alt]="comment.name" class="comments__avatar">
+              </div>
+              <div class="comments__comment-container">
+                <div class="comments__title">
+                  <span class="comments__name">{{ comment.name }}</span>
+                  <span class="comments__time">{{ comment.time }}</span>
+                  <p class="comments__text">{{ comment.comment }}</p>
+                </div>
+              </div>
+              <div class="comments__likes-container">
+                <button class="comments__like">
+                  <span class="comments__likes-number">{{ comment.likes }}</span>
+                  <span class="comments__heart"></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+          <button class="comments__more">more comments</button>
+        </div>
       </div>
     </div>
   </div>
