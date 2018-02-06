@@ -1,28 +1,42 @@
 <div class="auth">
-  <div class="auth__form">
-    <div class="auth__title">authentication form</div>
-    <div class="auth__form-field">
-      <input class="auth__input" title="Login" placeholder="LOGIN OR EMAIL">
+  <mat-card class="auth__form">
+    <span class="auth__title">AUTHENTICATION FORM</span>
+    <mat-card-content>
+      <div class="auth__field">
+        <mat-form-field class="auth__input">
+          <input matInput placeholder="LOGIN OR EMAIL" title="Login">
+        </mat-form-field>
+      </div>
+      <div class="auth__field">
+        <mat-form-field class="auth__input">
+          <input matInput placeholder="PASSWORD" title="Password">
+        </mat-form-field>
+      </div>
+      <div class="auth__social-block">
+        <mat-card-subtitle>LOG IN WITH</mat-card-subtitle>
+        <div class="auth__social-icons">
+          <a href="#" class="auth__social-icon">
+            <img src="../../../assets/images/png/facebook.png" alt="fb" class="auth__img">
+          </a>
+          <a href="#" class="auth__social-icon">
+            <img src="../../../assets/images/png/google-plus.png" alt="gp" class="auth__img">
+          </a>
+          <a href="#" class="auth__social-icon">
+            <img src="../../../assets/images/png/twitter.png" alt="tw" class="auth__img">
+          </a>
+          <a href="#" class="auth__social-icon">
+            <img src="../../../assets/images/png/vk.png" alt="vk" class="auth__img">
+          </a>
+        </div>
+      </div>
+    </mat-card-content>
+    <div class="auth__form-actions">
+        <div class="auth__action">
+          <button mat-raised-button color="primary" class="auth__button">LOG IN</button>
+        </div>
+      <div class="auth__action">
+        <button mat-raised-button color="basic" class="auth__button">SIGN UP</button>
+      </div>
     </div>
-    <div class="auth__form-field">
-      <input class="auth__input" title="Password" placeholder="PASSWORD">
-    </div>
-    <div class="auth__social">
-      <span class="auth__social-header">log in with</span>
-      <span class="auth__social-icon">
-        <img src="../../../assets/images/png/facebook.png" alt="fb" class="auth__img">
-      </span>
-      <span class="auth__social-icon">
-        <img src="../../../assets/images/png/google-plus.png" alt="gp" class="auth__img">
-      </span>
-      <span class="auth__social-icon">
-        <img src="../../../assets/images/png/twitter.png" alt="tw" class="auth__img">
-      </span>
-      <span class="auth__social-icon">
-        <img src="../../../assets/images/png/vk.png" alt="vk" class="auth__img">
-      </span>
-    </div>
-    <button class="auth__button auth__button--green">log in</button>
-    <button class="auth__button auth__button--yellow">sign in</button>
-  </div>
+  </mat-card>
 </div>

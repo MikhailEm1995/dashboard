@@ -7,12 +7,4 @@ import { Component, Input } from '@angular/core';
 })
 export class ToolbarComponent {
   @Input() onClick;
-
-  open = false;
-
-  onToggle(): void {
-    this.open = !this.open;
-
-    this.onClick(this.open);
-  }
 }

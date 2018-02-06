@@ -10,10 +10,6 @@ $filter-font: 600 .9rem 'Myriad', sans-serif;
 .filter {
   display: flex;
   align-items: center;
-
-  position: fixed;
-  top: $header-height;
-  left: 0;
   width: 100%;
   height: $header-height;
   padding: 0 40px;

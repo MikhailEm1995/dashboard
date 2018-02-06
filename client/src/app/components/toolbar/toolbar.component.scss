@@ -1,64 +1,16 @@
 @import '../../../assets/css/variables';
 
 .toolbar {
-  height: $header-height;
-  width: 100%;
-  background-color: $green;
-  padding: 20px 40px;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
 
-  z-index: 999;
+  padding: 20px 60px 20px 20px;
 
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
+  width: 100%;
+  height: $header-height;
 
-  &__logo {
-    float: left;
-
-    font: 700 1.6rem/40px 'Myriad', sans-serif;
-    color: $white-yellow;
-    text-transform: uppercase;
-  }
-}
-
-.burger {
-  float: right;
-
-  display: inline-block;
-  background-color: transparent;
-  border: none;
-  margin-top: 6px;
-
-  cursor: pointer;
-
-  &:active,
-  &:focus {
-    outline: none;
-  }
-
-  &__bar {
-    display: block;
-    width: 35px;
-    height: 4px;
-    border-radius: 2px;
-    margin-bottom: 5px;
-
-    background-color: $white-yellow;
-
-    transition: all .4s ease;
-
-    &--top {
-      transform: rotate(135deg) translateY(-12px);
-    }
-
-    &--middle {
-      transform: translateX(15px);
-      opacity: 0;
-    }
-
-    &--bottom {
-      transform: rotate(-135deg) translateY(13px);
-    }
-  }
+  z-index: 2;
 }

@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class LayoutComponent {
   sidebarOpened = false;
 
-  handleClick = state => this.sidebarOpened = state;
+  handleClick = sidenav => () => sidenav.toggle();
 }

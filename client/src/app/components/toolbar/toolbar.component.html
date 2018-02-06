@@ -1,8 +1,6 @@
-<div class="toolbar">
-  <span class="toolbar__logo">dashboard</span>
-  <button class="burger" (click)="onToggle()">
-    <span [ngClass]="'burger__bar' + (open ? ' burger__bar--top' : '')"></span>
-    <span [ngClass]="'burger__bar' + (open ? ' burger__bar--middle' : '')"></span>
-    <span [ngClass]="'burger__bar' + (open ? ' burger__bar--bottom' : '')"></span>
+<mat-toolbar color="primary" class="toolbar">
+  <button mat-icon-button color="basic" (click)="onClick()">
+    <mat-icon>menu</mat-icon>
   </button>
-</div>
+  <h1>DASHBOARD</h1>
+</mat-toolbar>
