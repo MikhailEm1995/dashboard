@@ -1,5 +1,11 @@
-<app-toolbar [onClick]="handleClick"></app-toolbar>
-<div class="content">
-  <ng-content></ng-content>
-</div>
-<app-sidebar [opened]="sidebarOpened"></app-sidebar>
+<app-toolbar [onClick]="handleClick(sidenav)"></app-toolbar>
+<mat-sidenav-container class="layout">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="layout__sidenav">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-container>
+    <div class="content">
+      <ng-content></ng-content>
+    </div>
+  </mat-sidenav-container>
+</mat-sidenav-container>

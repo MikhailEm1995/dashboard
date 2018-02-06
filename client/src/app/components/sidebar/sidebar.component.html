@@ -1,41 +1,63 @@
-<div [ngClass]="'sidebar' + (opened ? ' sidebar--opened' : '')">
-  <button class="sidebar__button">
-    <img src="../../../assets/images/png/user.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">My Profile</span>
-  </button>
-  <button class="sidebar__button" [routerLink]="'/' + STORE">
-    <img src="../../../assets/images/png/store.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">Store</span>
-  </button>
-  <button class="sidebar__button">
-    <img src="../../../assets/images/png/apps.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">My apps</span>
-  </button>
-  <button class="sidebar__button">
-    <img src="../../../assets/images/png/question.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">About</span>
-  </button>
-  <button class="sidebar__button" [routerLink]="'/' + AUTH">
-    <img src="../../../assets/images/png/logout.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">Logout</span>
-  </button>
+<div class="sidebar mat-typography">
+  <mat-list>
+    <h2>Menu</h2>
+    <mat-list-item>
+      <button mat-button color="basic" class="sidebar__button">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <span>My Profile</span>
+      </button>
+    </mat-list-item>
+    <mat-list-item>
+      <button mat-button color="primary" [routerLink]="'/' + STORE" class="sidebar__button">
+        <mat-icon mat-list-icon>store</mat-icon>
+        <span>Store</span>
+      </button>
+    </mat-list-item>
+    <mat-list-item>
+      <button mat-button color="basic" class="sidebar__button">
+        <mat-icon mat-list-icon>apps</mat-icon>
+        <span>My apps</span>
+      </button>
+    </mat-list-item>
+    <mat-list-item>
+      <button mat-button color="basic" class="sidebar__button">
+        <mat-icon mat-list-icon>info</mat-icon>
+        <span>About</span>
+      </button>
+    </mat-list-item>
+    <mat-list-item>
+      <button mat-button color="basic" [routerLink]="'/' + AUTH" class="sidebar__button">
+        <mat-icon mat-list-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-list-item>
 
-  <div class="sidebar__header">Recent</div>
+    <mat-divider></mat-divider>
+    <h3 mat-subheader>RECENT</h3>
 
-  <button class="sidebar__button">
-    <img src="../../../assets/images/png/dollar.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">Accountant</span>
-  </button>
-  <button class="sidebar__button">
-    <img src="../../../assets/images/png/todo.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">todo list</span>
-  </button>
-  <button class="sidebar__button">
-    <img src="../../../assets/images/png/notes.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">notes</span>
-  </button>
-  <button class="sidebar__button">
-    <img src="../../../assets/images/png/weather.png" class="sidebar__button-img">
-    <span class="sidebar__button-text">weather</span>
-  </button>
+    <mat-list-item>
+      <button mat-button color="basic" class="sidebar__button">
+        <mat-icon mat-list-icon>attach_money</mat-icon>
+        <span>Accountant</span>
+      </button>
+    </mat-list-item>
+    <mat-list-item>
+      <button mat-button color="basic" class="sidebar__button">
+        <mat-icon mat-list-icon>check_circle</mat-icon>
+        <span>Todo list</span>
+      </button>
+    </mat-list-item>
+    <mat-list-item>
+      <button mat-button color="basic" class="sidebar__button">
+        <mat-icon mat-list-icon>content_copy</mat-icon>
+        <span>Notes</span>
+      </button>
+    </mat-list-item>
+    <mat-list-item>
+      <button mat-button color="basic" class="sidebar__button">
+        <mat-icon mat-list-icon>cloud_queue</mat-icon>
+        <span>Weather</span>
+      </button>
+    </mat-list-item>
+  </mat-list>
 </div>

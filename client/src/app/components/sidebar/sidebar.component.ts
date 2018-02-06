@@ -11,8 +11,6 @@ import {
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  @Input() opened: boolean;
-
   AUTH = AUTH;
   STORE = STORE;
 }
